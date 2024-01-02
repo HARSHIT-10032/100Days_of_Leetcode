@@ -1,0 +1,18 @@
+class Solution {
+public:
+    
+    string removeOccurrences(string s, string part)
+    {
+        // string s = "axxxyyyyb";
+        // string part = "xy";
+        int position = s.find(part);
+        // jab tak valid index mil raha hai
+        while (position != string::npos)
+        {
+            s.erase(position, part.length());
+            position = s.find(part);
+        }
+        return s;
+    }
+    
+};
